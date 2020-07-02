@@ -1,0 +1,18 @@
+#!/usr/bin/nodejs
+var debug = require('debug')('stocks-api:server');
+var app = require('../app');
+const https = require('https');
+
+const fs = require('fs');
+const privateKey = fs.readFileSync('/etc/ssl/private/node-selfsigned.key', 'utf8');
+const certificate = fs.readFileSync('/etc/ssl/certs/node-selfsigned.crt', 'utf8');
+const credentials = {
+    key: privateKey,
+    cert: certificate
+};
+
+const server = https.createServer(credentials, app);
+
+app.set(server);
+
+server.listen(443);
