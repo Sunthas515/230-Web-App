@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./1393720.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: auto;
+}
+
+.hero-text {
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  color: white;
+  font-family: fantasy;
+  font-size: 32px;
+}
+
+.login {
+  float: center;
+  float: right;
+  font-family: Arial;
+}
+
+.btn-group {
+  width: 100%;
+}
